@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTabs Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+            padding: 10px 0;
+        }
+        nav button {
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav button:hover {
+            background-color: #3e8e41;
+        }
+        nav button.active {
+            background-color: #2c3e50;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+                font-size: 12px; /* Reduce font size */
+            
+        }
+        
+     h3 {
+        margin-top: 30px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TechTabs Dashboard</h1>
+        <p>Simplifying Technology, One Tab at a Time</p>
+    </header>
+    <nav>
+        <button class="tab-button" data-tab="aws">AWS</button>
+        <button class="tab-button" data-tab="git">Git</button>
+        <button class="tab-button" data-tab="linux">Linux</button>
+        <button class="tab-button" data-tab="sql">SQL</button>
+        <button class="tab-button" data-tab="docker">Docker</button>
+        <button class="tab-button" data-tab="jenkins">Jenkins</button>
+    </nav>
+<section id="aws" class="tab-content">
+    <h2>AWS Overview</h2>
+    <h3>What is AWS?</h3>
+    <p>AWS (Amazon Web Services) provides on-demand cloud computing platforms. Key services include EC2, S3, Lambda, and RDS.</p>
+
+    <h3>What is Amazon S3?</h3>
+    <p><b>Amazon S3</b> is a scalable, durable, and low-latency object storage service.</p>
+    <h3>Use of Amazon S3</h3>
+    <ul>
+        <li><b>Storage of large amounts of data:</b> Used for files, backups, media content, logs, and static assets.</li>
+        <li><b>Durability:</b> Data is automatically replicated across multiple data centers to ensure availability.</li>
+        <li><b>Access from anywhere:</b> Accessible over the internet to retrieve data globally.</li>
+    </ul>
+
+    <h3>What is Amazon EC2?</h3>
+    <p><b>Amazon EC2</b> provides scalable compute capacity in the cloud, allowing you to launch virtual servers (instances) on-demand.</p>
+    <h3>Use of Amazon EC2</h3>
+    <ul>
+        <li><b>Run applications:</b> Host websites, process workloads, and run applications on virtual instances.</li>
+        <li><b>Flexible instance types:</b> Choose from various types of instances based on computing needs.</li>
+        <li><b>Cost-effective:</b> Pay only for the compute time you use, making it economical.</li>
+    </ul>
+
+    <h3>Key Features of Amazon EC2</h3>
+    <ul>
+        <li><b>On-demand Instances:</b> Start and stop instances whenever needed.</li>
+        <li><b>Scalability:</b> Scale instances up or down based on your requirements.</li>
+        <li><b>Elastic Load Balancing:</b> Distribute traffic across multiple instances for high availability.</li>
+    </ul>
+</section>
+    <section id="git" class="tab-content">
+        <h2>Git Overview</h2>
+        <p>Git is a distributed version control system. Below are commonly used Git commands:</p>
+        <ul>
+            <li><b>git init:</b> Initializes a new Git repository in the current directory.</li>
+            <li><b>git clone &lt;repository_url&gt;:</b> Creates a copy of a remote Git repository on your local machine.</li>
+            <li><b>git status:</b> Shows the status of changes in your working directory and staging area.</li>
+            <li><b>git add &lt;file&gt;:</b> Stages a specific file to be committed (e.g., git add index.html).</li>
+            <li><b>git commit -m &quot;message&quot;:</b> Commits staged changes with a message describing the changes.</li>
+            <li><b>git pull:</b> Fetches and merges changes from the remote repository into your current branch.</li>
+            <li><b>git push:</b> Pushes your local commits to the remote repository.</li>
+            <li><b>git branch:</b> Lists all branches in your repository, highlighting the current branch.</li>
+            <li><b>git checkout &lt;branch&gt;:</b> Switches to a different branch in your repository.</li>
+            <li><b>git log:</b> Shows the commit history of the current branch, displaying commit IDs, author info, and messages.</li>
+        </ul>
+    </section>
+    <section id="linux" class="tab-content">
+        <h2>Linux Overview</h2>
+        <p>Linux is an open-source operating system. Here are 10 basic Linux commands:</p>
+        <ul>
+            <li><b>ls:</b> List files and directories in the current directory.</li>
+            <li><b>cd:</b> Change the current directory (e.g., cd /home/user).</li>
+            <li><b>mkdir:</b> Create a new directory (e.g., mkdir new_folder).</li>
+            <li><b>rm:</b> Remove files or directories (e.g., rm file.txt, rm -r folder/).</li>
+            <li><b>cp:</b> Copy files or directories (e.g., cp file1.txt file2.txt).</li>
+            <li><b>mv:</b> Move or rename files or directories (e.g., mv oldname.txt newname.txt).</li>
+            <li><b>touch:</b> Create an empty file (e.g., touch newfile.txt).</li>
+            <li><b>cat:</b> View the contents of a file (e.g., cat file.txt).</li>
+            <li><b>echo:</b> Display a message or create a file with text (e.g., echo "Hello, World!" > file.txt).</li>
+            <li><b>pwd:</b> Print the current working directory.</li>
+        </ul>
+    </section>
+<section id="sql" class="tab-content">
+    <h2>SQL Overview</h2>
+    <p>SQL (Structured Query Language) is used to manage and manipulate relational databases. Below are common SQL operations:</p>
+    <ul>
+        <li><b>DDL:</b> Data Definition Language (CREATE, ALTER, DROP).</li>
+        <li><b>DML:</b> Data Manipulation Language (INSERT, UPDATE, DELETE).</li>
+        <li><b>DQL:</b> Data Query Language (SELECT).</li>
+        <li><b>DCL:</b> Data Control Language (GRANT, REVOKE).</li>
+    </ul>
+
+    <h3>SQL Joins</h3>
+    <p>Joins are used to combine rows from two or more tables based on a related column.</p>
+    <ul>
+        <li><b>INNER JOIN:</b> Returns records with matching values in both tables.</li>
+        <li><b>LEFT JOIN:</b> Returns all records from the left table, and the matched records from the right table.</li>
+        <li><b>RIGHT JOIN:</b> Returns all records from the right table, and the matched records from the left table.</li>
+        <li><b>FULL JOIN:</b> Returns all records when there is a match in either left or right table.</li>
+    </ul>
+
+    <h3>Examples</h3>
+    <h4>DDL Query:</h4>
+    <pre>
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Department VARCHAR(50)
+);
+    </pre>
+    
+    <h4>DML Query:</h4>
+    <pre>
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Department)
+VALUES (1, 'John', 'Doe', 'HR');
+    </pre>
+    
+    <h4>DQL Query:</h4>
+    <pre>
+SELECT * FROM Employees;
+    </pre>
+    
+    <h4>DCL Query:</h4>
+    <pre>
+GRANT SELECT ON Employees TO 'username';
+    </pre>
+
+    <h3>GROUP BY and ORDER BY</h3>
+    <p>These clauses are used to organize and sort query results:</p>
+    <ul>
+        <li><b>GROUP BY:</b> Groups rows sharing a property into summary rows.</li>
+        <li><b>ORDER BY:</b> Sorts the results in ascending (ASC) or descending (DESC) order.</li>
+    </ul>
+    <h4>Example:</h4>
+    <pre>
+SELECT Department, COUNT(*) AS EmployeeCount
+FROM Employees
+GROUP BY Department
+ORDER BY EmployeeCount DESC;
+    </pre>
+</section>
+
+    <section id="docker" class="tab-content">
+        <h2>Docker Overview</h2>
+        <h3>What is Docker?</h3>
+        <p>
+            Docker is an open-source platform designed to automate the deployment, scaling, and management of applications using containerization.
+            Containers are lightweight, standalone, and executable units that package the application and its dependencies together, ensuring consistent performance across environments.
+        </p>
+        <h3>Key Features of Docker</h3>
+        <ul>
+            <li><b>Lightweight:</b> Containers share the host OS kernel, making them faster and more efficient than virtual machines.</li>
+            <li><b>Portability:</b> "Build once, run anywhere" — Docker containers can run on any system with Docker installed.</li>
+            <li><b>Scalability:</b> Easily scale applications across multiple containers.</li>
+            <li><b>Isolation:</b> Applications run in isolated environments, reducing dependency conflicts.</li>
+        </ul>
+        <h3>Common Docker Components</h3>
+        <ul>
+            <li><b>Docker Engine:</b> The core service for creating and running containers.</li>
+            <li><b>Docker Image:</b> A pre-configured template to create containers.</li>
+            <li><b>Docker Container:</b> A running instance of a Docker image.</li>
+            <li><b>Dockerfile:</b> A script that defines how to build a Docker image.</li>
+            <li><b>Docker Hub:</b> A cloud-based registry for sharing Docker images.</li>
+        </ul>
+        <p>Below are some common Docker commands:</p>
+        <ul>
+            <li><b>docker build:</b> Build an image from a Dockerfile.</li>
+            <li><b>docker run:</b> Run a container.</li>
+            <li><b>docker ps:</b> List running containers.</li>
+        </ul>
+    </section>
+    <section id="jenkins" class="tab-content">
+        <h2>Jenkins Overview</h2>
+        <h3>What is Jenkins?</h3>
+        <p>
+            Jenkins is an open-source automation tool written in Java, used to automate tasks like building, testing, and deploying software
+            in a Continuous Integration and Continuous Delivery (CI/CD) pipeline. It simplifies software development by integrating various stages of the pipeline into a single, automated process.
+        </p>
+        <h3>Key Features of Jenkins</h3>
+        <ul>
+            <li><b>Free and Open-Source:</b> Completely free to use with a large, active community.</li>
+            <li><b>Extensibility:</b> Jenkins has over 1,000 plugins to support building, deploying, and automating projects.</li>
+            <li><b>Distributed Builds:</b> Jenkins can distribute tasks across multiple machines to speed up the build process.</li>
+        </ul>
+        <p>Here are a few basic Jenkins commands:</p>
+        <ul>
+            <li><b>java -jar jenkins.war:</b> Start Jenkins.</li>
+            <li><b>Jenkins CLI:</b> Interact with Jenkins through command-line tools.</li>
+            <li><b>jenkins-cli.jar build:</b> Trigger builds from the command line.</li>
+        </ul>
+    </section>
+<footer>
+    <p>&copy; 2024 TechTabs Dashboard. All rights reserved.</p>
+</footer>
+    <script>
+        const tabs = document.querySelectorAll('.tab-button');
+        const sections = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and sections
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+
+                // Add active class to the clicked tab and corresponding section
+                tab.classList.add('active');
+                const activeSection = document.getElementById(tab.dataset.tab);
+                activeSection.classList.add('active');
+            });
+        });
+
+        // Set default active tab and section
+        document.querySelector('.tab-button').classList.add('active');
+        document.getElementById(tabs[0].dataset.tab).classList.add('active');
+    </script>
+</body>
+</html>
